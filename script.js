@@ -1,20 +1,32 @@
-// 1. Criar o array com os dados dos projetos
+// 1. Array de objetos contendo os dados das atividades do semestre
 const meusProjetos = [
-    { titulo: "Projeto A", desc: "Descrição do projeto A", link: "#" },
-    { titulo: "Projeto B", desc: "Descrição do projeto B", link: "#" },
-    { titulo: "Projeto C", desc: "Descrição do projeto C", link: "#" }
+    { 
+        titulo: "Atividade 01 - Portfólio MVP", 
+        desc: "Desenvolvimento da primeira versão do portfólio profissional utilizando HTML5 semântico, CSS3 e lógica de renderização com JavaScript puro.", 
+        link: "https://antoniojose-ux.github.io/meu-portfolio/" 
+    },
+    { 
+        titulo: "Atividade 02 - Portfólio React", 
+        desc: "Evolução do projeto para um ambiente moderno utilizando React.js e Vite, focando em componentização e melhor performance.", 
+        link: "#" // Se ele já tiver o link da atividade 2, coloque aqui
+    },
+    { 
+        titulo: "Projeto Final - Sistemas Web", 
+        desc: "Em desenvolvimento: Aplicação completa integrando banco de dados e autenticação de usuários.", 
+        link: "#" 
+    }
 ];
 
-// 2. Selecionar onde vamos mostrar os projetos
+// 2. Seleciona o elemento onde os projetos serão inseridos
 const container = document.getElementById('lista-projetos');
 
-// 3. Renderizar dinamicamente
+// 3. Função para renderizar os cards na tela de forma dinâmica
 meusProjetos.forEach(projeto => {
     container.innerHTML += `
         <div class="card">
             <h3>${projeto.titulo}</h3>
             <p>${projeto.desc}</p>
-            <a href="${projeto.link}">Ver Projeto</a>
+            <a href="${projeto.link}" target="_blank">Acessar Projeto</a>
         </div>
     `;
 });
